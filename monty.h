@@ -1,7 +1,6 @@
 #ifndef MONTY_H
 #define MONTY_H
 
-#define _GNU_SOURCE
 #include <stdio.h>
 #include <unistd.h>
 #include <string.h>
@@ -81,4 +80,12 @@ void addnode(stack_t **head, int n);
 void addqueue(stack_t **head, int n);
 void f_queue(stack_t **head, unsigned int counter);
 void f_stack(stack_t **head, unsigned int counter);
+
+void t_pall(stack_t **head);
+void t_add(stack_t **stack, unsigned int line_number);
+void t_pop(stack_t **stack, unsigned int line_number);
+void t_pusherror(int line_number);
+void t_unknowninstruction(int line_number, char opcode[]);
+void t_openerror(const char *fileT);
+void t_printerror(void);
 #endif
